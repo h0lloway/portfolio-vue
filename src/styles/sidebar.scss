@@ -25,10 +25,8 @@
     }
   }
 
-
   &__name {
     margin-top: 8px;
-
     font-size: 24px;
     font-weight: 500;
     line-height: 28px;
@@ -83,5 +81,26 @@
 
   &__hobby-list {
     padding-bottom: 26px;
+  }
+}
+
+.sidebar-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .sidebar-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    width: 20px;
+    background: #7b9bc6;
+    height: 100%;
+    top: 0;
+    z-index: 15;
+    cursor: pointer;
+    color: var(--white-color);
   }
 }

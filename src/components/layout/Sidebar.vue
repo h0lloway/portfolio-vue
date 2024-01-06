@@ -7,34 +7,22 @@ const props = defineProps({
     required: false,
   },
 });
-
-// const links = ref([
-//   { name: "Typography", href: "/typography" },
-//   { name: "Button", href: "/button" },
-// ]);
 </script>
 
 
 <template>
   <div :class="['sidebar', { sidebar_isopen: openSidebar }]">
-    <!-- <router-link
-      class="sidebar__link"
-      v-for="link in links"
-      :key="link.name"
-      :to="link.href"
-      >{{ link.name }}
-      </router-link> -->
 
     <div class="sidebar__img">
-      <img src="@/assets/img/me-squ.png" alt="##" />
+      <img src="@/assets/img/me-squ.png" alt="my photo" />
     </div>
 
-    <div class="sidebar__name">Anurag Yadav</div>
+    <div class="sidebar__name">Dubrovin Maksim</div>
 
     <div class="sidebar__descr">
-      A well-organized, creative and goaloriented graduate possessing excellent
-      communication, problem-solving and leadership skills with a flair to
-      explore Computer Science Engineering
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sequi facilis
+      nostrum, culpa, dignissimos dicta aliquid ut commodi aspernatur harum
+      voluptatum enim libero.
     </div>
 
     <!-- контакты -->
@@ -43,7 +31,7 @@ const props = defineProps({
       <li class="contact-list__item common-link">
         <div class="common-link__wrap">
           <div class="img">
-            <img src="@/assets/img/email.svg" alt="##" />
+            <img src="@/assets/img/email.svg" alt="email" />
           </div>
           <div class="common-link__content">
             <span class="name">Email</span>
@@ -56,7 +44,7 @@ const props = defineProps({
       <li class="contact-list__item common-link">
         <div class="common-link__wrap">
           <div class="img">
-            <img src="@/assets/img/website.svg" alt="##" />
+            <img src="@/assets/img/website.svg" alt="website" />
           </div>
           <div class="common-link__content">
             <span class="name">Website</span>
@@ -71,12 +59,12 @@ const props = defineProps({
       <li class="contact-list__item common-link">
         <div class="common-link__wrap">
           <div class="img">
-            <img src="@/assets/img/phone.svg" alt="##" />
+            <img src="@/assets/img/phone.svg" alt="phone" />
           </div>
           <div class="common-link__content">
             <span class="name">Phone</span>
             <span class="descr">
-              <a href="tel:+79892804919">+7 (989) 280 49-19</a>
+              <a href="tel:+79892804919">+7 (989) 280 **-**</a>
             </span>
           </div>
         </div>
@@ -84,7 +72,7 @@ const props = defineProps({
       <li class="contact-list__item common-link">
         <div class="common-link__wrap">
           <div class="img">
-            <img src="@/assets/img/address.svg" alt="##" />
+            <img src="@/assets/img/address.svg" alt="address" />
           </div>
           <div class="common-link__content">
             <span class="name">Address</span>
@@ -101,7 +89,7 @@ const props = defineProps({
       <li class="social-list__item common-link">
         <div class="common-link__wrap">
           <div class="img">
-            <img src="@/assets/img/inst.svg" alt="##" />
+            <img src="@/assets/img/inst.svg" alt="inst" />
           </div>
           <div class="common-link__content">
             <span class="name">Instagram</span>
@@ -114,7 +102,7 @@ const props = defineProps({
       <li class="social-list__item common-link">
         <div class="common-link__wrap">
           <div class="img">
-            <img src="@/assets/img/github.svg" alt="##" />
+            <img src="@/assets/img/github.svg" alt="github" />
           </div>
           <div class="common-link__content">
             <span class="name">Github</span>
@@ -129,7 +117,7 @@ const props = defineProps({
       <li class="social-list__item common-link">
         <div class="common-link__wrap">
           <div class="img">
-            <img src="@/assets/img/vk.svg" width="30" alt="##" />
+            <img src="@/assets/img/vk.svg" width="30" alt="vk" />
           </div>
           <div class="common-link__content">
             <span class="name">VK</span>
@@ -139,19 +127,6 @@ const props = defineProps({
           </div>
         </div>
       </li>
-      <!-- <li class="social-list__item common-link">
-        <div class="common-link__wrap">
-          <div class="img">
-            <img src="@/assets/img/linked1.svg" width="30" alt="##" />
-          </div>
-          <div class="common-link__content">
-            <span class="name">Linkedin</span>
-            <span class="descr">
-              <a href="https://vk.com/h0lloway">@anuragyadav</a>
-            </span>
-          </div>
-        </div>
-      </li> -->
     </ul>
 
     <!-- языки -->
@@ -161,10 +136,10 @@ const props = defineProps({
       <li class="lang-list__item common-link">
         <div class="common-link__wrap">
           <div class="img">
-            <img src="@/assets/img/india.svg" alt="##" />
+            <img src="@/assets/img/rus.svg" width="34" alt="ru" />
           </div>
           <div class="common-link__content">
-            <span class="name">Hindi</span>
+            <span class="name">Russian</span>
             <span class="descr"> Native </span>
           </div>
         </div>
@@ -172,22 +147,11 @@ const props = defineProps({
       <li class="lang-list__item common-link">
         <div class="common-link__wrap">
           <div class="img">
-            <img src="@/assets/img/eng.svg" alt="##" />
+            <img src="@/assets/img/eng.svg" alt="eng" />
           </div>
           <div class="common-link__content">
             <span class="name">English</span>
-            <span class="descr"> Professional working </span>
-          </div>
-        </div>
-      </li>
-      <li class="lang-list__item common-link">
-        <div class="common-link__wrap">
-          <div class="img">
-            <img src="@/assets/img/spanish.svg" alt="##" />
-          </div>
-          <div class="common-link__content">
-            <span class="name">Spanish</span>
-            <span class="descr"> Elementary </span>
+            <span class="descr"> Intermediate </span>
           </div>
         </div>
       </li>
@@ -200,7 +164,17 @@ const props = defineProps({
       <li class="hobby-list__item common-link">
         <div class="common-link__wrap">
           <div class="img">
-            <img src="@/assets/img/game.svg" alt="##" />
+            <img src="@/assets/img/family.svg" alt="family" />
+          </div>
+          <div class="common-link__content">
+            <span class="descr">Family/house</span>
+          </div>
+        </div>
+      </li>
+      <li class="hobby-list__item common-link">
+        <div class="common-link__wrap">
+          <div class="img">
+            <img src="@/assets/img/computer.svg" alt="gaming" />
           </div>
           <div class="common-link__content">
             <span class="descr">Gaming</span>
@@ -210,30 +184,20 @@ const props = defineProps({
       <li class="hobby-list__item common-link">
         <div class="common-link__wrap">
           <div class="img">
-            <img src="@/assets/img/earth.svg" alt="##" />
+            <img src="@/assets/img/tv.svg" alt="TV" />
           </div>
           <div class="common-link__content">
-            <span class="descr">Travelling</span>
+            <span class="descr">TV series</span>
           </div>
         </div>
       </li>
       <li class="hobby-list__item common-link">
         <div class="common-link__wrap">
           <div class="img">
-            <img src="@/assets/img/brush.svg" alt="##" />
+            <img src="@/assets/img/fitness.svg" alt="fitness" />
           </div>
           <div class="common-link__content">
-            <span class="descr">Sketching/Graffitti</span>
-          </div>
-        </div>
-      </li>
-      <li class="hobby-list__item common-link">
-        <div class="common-link__wrap">
-          <div class="img">
-            <img src="@/assets/img/blog.svg" alt="##" />
-          </div>
-          <div class="common-link__content">
-            <span class="descr">Blogging</span>
+            <span class="descr">Fitness</span>
           </div>
         </div>
       </li>

@@ -3,58 +3,68 @@
 
 <template >
   <div class="education">
-    <h1 class="heading-1 mb-30">
-      <div class="circle"></div>
-      <span>Education</span>
-    </h1>
+    <div class="education__divider divider">
+      <div class="divider__circle">
+        <div class="divider__circle-inside">
+          <div class="divider__circle-inside-viol"></div>
+        </div>
+      </div>
+      <div class="divider__line"></div>
+    </div>
 
-    <ul class="education__list list-reset">
-      <li class="education__list-item list-item">
-        <div class="list-item__wrap wrap">
-          <div class="wrap__name">
-            <img src="@/assets/img/univ1.svg" width="40" alt="##" />
-            <span>Chandigarh University</span>
+    <div class="education__content content-common">
+      <h1 class="heading-1 mb-30">
+        <div class="circle"></div>
+        <span>Education</span>
+      </h1>
+
+      <ul class="education__list list-reset">
+        <li class="education__list-item list-item">
+          <div class="list-item__wrap wrap">
+            <div class="wrap__name">
+              <img
+                style="
+                  border: 0.4px solid #cacaca;
+                  height: 47px;
+                  padding: 0 5px;
+                  border-radius: 15px;
+                "
+                src="@/assets/img/skillbox-logo.svg"
+                width="47"
+                alt="logo"
+              />
+              <span
+                >Образовательная <br />
+                платформа Skillbox</span
+              >
+            </div>
+            <div class="wrap__descr">Профессия Frontend&#8209;разработчик</div>
+            <div class="wrap__date">2021-2022</div>
           </div>
-          <div class="wrap__descr">
-            Bachelor in Computer Science Engineering
+        </li>
+        <li class="education__list-item list-item">
+          <div class="list-item__wrap wrap">
+            <div class="wrap__name">
+              <img src="@/assets/img/DSTU1.png" width="46" alt="logo" />
+              <span>Донской Государственный Технический Университет</span>
+            </div>
+            <div class="wrap__descr">Кафедра «Технология Машиностроения»</div>
+            <div class="wrap__date">2013-2015</div>
           </div>
-          <div class="wrap__date">2020 - 2024</div>
-          <div class="wrap__percent"><span>Percentage</span> - 9 CGPA</div>
-        </div>
-      </li>
-      <li class="education__list-item list-item">
-        <div class="list-item__wrap wrap">
-          <div class="wrap__name">
-            <img src="@/assets/img/univ2.svg" width="47" alt="##" />
-            <span>Suditi Global Academy</span>
-          </div>
-          <div class="wrap__descr">Intermediate XI - XII(CBSE)</div>
-          <div class="wrap__date">2018-2020</div>
-          <div class="wrap__percent"><span>Percentage</span> - 85%</div>
-        </div>
-      </li>
-      <li class="education__list-item list-item">
-        <div class="list-item__wrap wrap">
-          <div class="wrap__name">
-            <img src="@/assets/img/univ3.svg" width="46" alt="##" />
-            <span>Akanksha Global Acadmey</span>
-          </div>
-          <div class="wrap__descr">High School IX - X(CBSE)</div>
-          <div class="wrap__date">2016-2018</div>
-          <div class="wrap__percent"><span>Percentage</span> - 92%</div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 
 <style lang="scss" scoped>
 .education {
-  margin-bottom: 45px;
+  display: flex;
 
   &__list {
     display: flex;
+    margin-bottom: 30px;
   }
   .list-item {
     flex: 1 1 33%;
@@ -84,12 +94,12 @@
       &__date {
         margin-bottom: 10px;
         color: #79819a;
-        font: 400 12px/128% "DM Sans", sans-serif;
+        font: 400 12px/128% "Manrope", sans-serif;
         letter-spacing: 0.101px;
       }
 
       &__percent {
-        font: 400 14px/128% "DM Sans", sans-serif;
+        font: 400 14px/128% "Manrope", sans-serif;
         letter-spacing: 0.121px;
 
         span {
@@ -106,6 +116,37 @@
   }
   .list-item:not(:last-child) {
     margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .education {
+    &__list {
+      flex-direction: column;
+    }
+
+    .list-item:not(:last-child) {
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    .list-item:first-child {
+      border-radius: 10px 10px 0 0;
+    }
+
+    .list-item:last-child {
+      border-radius: 0 0 10px 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .education {
+    .list-item {
+      .wrap {
+        padding: 15px;
+      }
+    }
   }
 }
 </style>

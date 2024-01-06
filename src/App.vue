@@ -39,7 +39,7 @@ const toggleMenu = () => {
 
 #app {
   padding: 0;
-  font-family: "Outfit", Arial, Helvetica, sans-serif;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -50,26 +50,16 @@ const toggleMenu = () => {
 
 .content {
   position: relative;
-  margin-left: 425px;
+  margin-left: 360px;
   padding: 30px;
   transition: 0.2s;
   &_full {
     margin-left: 0;
   }
 }
-.content::after {
-  position: absolute;
-  content: "";
-  width: 2px;
-  height: 96%;
-  background: #e2e6ee;
-  top: 35px;
-  left: -36px;
-}
-
 @media screen and (max-width: 1560px) {
   .content {
-    margin-left: 525px;
+    margin-left: 440px;
   }
 }
 
@@ -77,20 +67,26 @@ const toggleMenu = () => {
   .content {
     margin-left: 0;
   }
+}
 
-  .sidebar-toggle {
-    position: fixed;
-    left: 0;
-    width: 15px;
-    background: var(--primary-color);
-    height: 100%;
-    top: 0;
-    z-index: 15;
-    cursor: pointer;
-    color: var(--white-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media screen and (max-width: 800px) {
+  #app {
+    padding-left: 35px;
+  }
+
+  .content {
+    padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #app {
+    padding: 0 10px;
+    padding-left: 30px;
+  }
+
+  .content {
+    padding: 30px 0;
   }
 }
 </style>
