@@ -64,7 +64,7 @@ const props = defineProps({
           <div class="common-link__content">
             <span class="name">Phone</span>
             <span class="descr">
-              <a href="tel:+79892804919">+7 (989) 280 **-**</a>
+              <a href="tel:+79892804919">+7 (989) 280 49-19</a>
             </span>
           </div>
         </div>
@@ -122,7 +122,7 @@ const props = defineProps({
           <div class="common-link__content">
             <span class="name">VK</span>
             <span class="descr">
-              <a href="https://vk.com/h0lloway">@h0lloway</a>
+              <a href="https://vk.com/h0lloway" target="_blank">@h0lloway</a>
             </span>
           </div>
         </div>
