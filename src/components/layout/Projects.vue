@@ -85,7 +85,6 @@
 
   &__list {
     display: flex;
-    align-items: flex-start;
 
     margin-bottom: 30px;
   }
@@ -98,6 +97,7 @@
       height: 100%;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
 
       &__link {
         margin-top: 15px;
@@ -111,7 +111,6 @@
       .top {
         display: flex;
         align-items: center;
-        min-height: 68px;
 
         &__name {
           padding-left: 15px;

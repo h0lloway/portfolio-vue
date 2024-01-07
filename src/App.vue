@@ -17,7 +17,7 @@ const toggleMenu = () => {
 
 <template>
   <div class="container">
-    <div class="sidebar-toggle" @click="toggleMenu">&#5125;</div>
+    <div class="sidebar-toggle" @click="toggleMenu">&#8658;</div>
     <!-- <layout-header/> -->
     <layout-sidebar :openSidebar="isOpenMenu" />
 
@@ -81,7 +81,7 @@ const toggleMenu = () => {
 
 @media screen and (max-width: 500px) {
   #app {
-    padding: 0 10px;
+    padding: 0 15px;
     padding-left: 30px;
   }
 

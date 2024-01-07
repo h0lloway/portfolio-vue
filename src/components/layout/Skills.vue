@@ -21,21 +21,21 @@
       <ul class="skills__list list-reset">
         <li class="skills__list-item item1 list-item">
           <div class="list-item__wrap">
-            <img src="@/assets/img/figma.svg" width="40" alt="figma" />
+            <img src="@/assets/img/figma.svg" alt="figma" />
             <div class="tools-name">Figma</div>
             <div class="tools-descr">Верстка по макетам Figma</div>
           </div>
         </li>
         <li class="skills__list-item item2 list-item">
           <div class="list-item__wrap">
-            <img src="@/assets/img/gulp.svg" width="55" alt="gulp" />
+            <img src="@/assets/img/gulp.svg" alt="gulp" />
             <div class="tools-name">Gulp</div>
             <div class="tools-descr">Быстрый сборщик проектов</div>
           </div>
         </li>
         <li class="skills__list-item item3 list-item">
           <div class="list-item__wrap">
-            <img src="@/assets/img/git.svg" width="47" alt="git" />
+            <img src="@/assets/img/git.svg" alt="git" />
             <div class="tools-name">Git</div>
             <div class="tools-descr">
               Система контроля <br />
@@ -45,7 +45,7 @@
         </li>
         <li class="skills__list-item item4 list-item">
           <div class="list-item__wrap">
-            <img src="@/assets/img/vscode.svg" width="40" alt="vsc" />
+            <img src="@/assets/img/vscode.svg" alt="vsc" />
             <div class="tools-name">VS Code</div>
             <div class="tools-descr">
               Редактор <br />
@@ -55,7 +55,7 @@
         </li>
         <li class="skills__list-item item5 list-item">
           <div class="list-item__wrap">
-            <img src="@/assets/img/notion.svg" width="40" alt="notion" />
+            <img src="@/assets/img/notion.svg" alt="notion" />
             <div class="tools-name">Notion</div>
             <div class="tools-descr">
               Project <br />
@@ -65,7 +65,7 @@
         </li>
         <li class="skills__list-item item6 list-item">
           <div class="list-item__wrap">
-            <img src="@/assets/img/html.svg" width="48" alt="html" />
+            <img src="@/assets/img/html.svg" alt="html" />
             <div class="tools-name">HTML5</div>
             <div class="tools-descr">
               Семантическая разметка кода <br />
@@ -75,7 +75,7 @@
         </li>
         <li class="skills__list-item item7 list-item">
           <div class="list-item__wrap">
-            <img src="@/assets/img/sass.svg" width="70" alt="sass" />
+            <img src="@/assets/img/sass.svg" alt="sass" />
             <div class="tools-name">SCSS</div>
             <div class="tools-descr">
               Стилизация элементов <br />
@@ -85,7 +85,7 @@
         </li>
         <li class="skills__list-item item8 list-item">
           <div class="list-item__wrap">
-            <img src="@/assets/img/JS.svg" width="75" alt="js" />
+            <img src="@/assets/img/JS.svg" alt="js" />
             <div class="tools-name">JavaScript</div>
             <div class="tools-descr">Скрипты для динамичности страницы</div>
           </div>
@@ -150,6 +150,10 @@
       align-items: center;
       text-align: center;
       height: 100%;
+
+      img {
+        width: 60px;
+      }
 
       .tools-name {
         margin-top: 15px;
@@ -256,7 +260,15 @@
   .skills {
     .list-item {
       &__wrap {
-        padding: 10px;
+        padding: 20px 10px;
+
+        img {
+          width: 40px;
+        }
+
+        .tools-descr {
+          width: 80%;
+        }
       }
     }
   }

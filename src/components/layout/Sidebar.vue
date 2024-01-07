@@ -36,7 +36,7 @@ const props = defineProps({
           <div class="common-link__content">
             <span class="name">Email</span>
             <span class="descr">
-              <a href="mailto:gvodb27@gmail.com">gvodb27@gmail.com</a>
+              <a href="mailto:gvozdb27@gmail.com">gvozdb27@gmail.com</a>
             </span>
           </div>
         </div>
