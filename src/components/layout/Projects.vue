@@ -39,7 +39,7 @@
               <img src="@/assets/img/link.svg" width="24" alt="link" />
               <a
                 class="link"
-                href="https://coruscating-clafoutis-22da2b.netlify.app/"
+                href="https://dubrovin-portfolio.netlify.app/"
                 target="_blank"
                 >LINK to project</a
               >
