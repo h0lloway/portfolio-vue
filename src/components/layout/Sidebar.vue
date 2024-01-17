@@ -1,4 +1,5 @@
 <script setup>
+import SidebarTitle from "@/components/SidebarTitle.vue";
 import { ref } from "vue";
 
 const props = defineProps({
@@ -7,14 +8,92 @@ const props = defineProps({
     required: false,
   },
 });
+
+const contacts = ref([
+  {
+    name: "Email",
+    descr: "gvozdb27@gmail.com",
+    img: "email",
+    href: "mailto:gvozdb27@gmail.com",
+  },
+  {
+    name: "Website",
+    descr: "h0lloway.github.io/my-portfolio/",
+    img: "website",
+    href: "https://h0lloway.github.io/my-portfolio/",
+  },
+  {
+    name: "Phone",
+    descr: "+7 (989) 280 49-19",
+    img: "phone",
+    href: "tel:+79892804919",
+  },
+  {
+    name: "Address",
+    descr: "Aksai, Rostov-on-Don Region",
+    img: "address",
+  },
+]);
+
+const socials = ref([
+  {
+    name: "Instagram",
+    descr: "@mksm.17",
+    img: "inst",
+    href: "https://www.instagram.com/mksm.17",
+  },
+  {
+    name: "Github",
+    descr: "@h0lloway",
+    img: "github",
+    href: "https://github.com/h0lloway",
+  },
+  {
+    name: "VK",
+    descr: "@h0lloway",
+    img: "vk",
+    href: "https://vk.com/h0lloway",
+  },
+]);
+
+const langs = ref([
+  {
+    name: "Russian",
+    descr: "Native",
+    img: "rus",
+  },
+  {
+    name: "English",
+    descr: "Intermediate",
+    img: "eng",
+  },
+]);
+
+const hobbies = ref([
+  {
+    descr: "Family/house",
+    img: "family",
+  },
+  {
+    descr: "Gaming",
+    img: "computer",
+  },
+  {
+    descr: "TV series",
+    img: "tv",
+  },
+  {
+    descr: "Fitness",
+    img: "fitness",
+  },
+]);
 </script>
 
 
 <template>
   <div :class="['sidebar', { sidebar_isopen: openSidebar }]">
-
     <div class="sidebar__img">
-      <img src="@/assets/img/me-squ.png" alt="my photo" />
+      <img src="/assets/img/me-squ.png" alt="my photo" />
     </div>
 
     <div class="sidebar__name">Dubrovin Maksim</div>
@@ -28,55 +107,25 @@ const props = defineProps({
     <!-- контакты -->
 
     <ul class="sidebar__contact-list contact-list list-reset">
-      <li class="contact-list__item common-link">
+      <li
+        class="contact-list__item common-link"
+        v-for="contact in contacts"
+        :key="contact.name"
+      >
         <div class="common-link__wrap">
           <div class="img">
-            <img src="@/assets/img/email.svg" alt="email" />
+            <img
+              :src="'/assets/img/' + contact.img + '.svg'"
+              :alt="contact.img"
+            />
           </div>
           <div class="common-link__content">
-            <span class="name">Email</span>
+            <span class="name"> {{ contact.name }} </span>
             <span class="descr">
-              <a href="mailto:gvozdb27@gmail.com">gvozdb27@gmail.com</a>
+              <a :href="contact.href" :target="['_blank']">
+                {{ contact.descr }}
+              </a>
             </span>
-          </div>
-        </div>
-      </li>
-      <li class="contact-list__item common-link">
-        <div class="common-link__wrap">
-          <div class="img">
-            <img src="@/assets/img/website.svg" alt="website" />
-          </div>
-          <div class="common-link__content">
-            <span class="name">Website</span>
-            <span class="descr">
-              <a href="https://h0lloway.github.io/my-portfolio/" target="_blank"
-                >h0lloway.github.io/my-portfolio/</a
-              >
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="contact-list__item common-link">
-        <div class="common-link__wrap">
-          <div class="img">
-            <img src="@/assets/img/phone.svg" alt="phone" />
-          </div>
-          <div class="common-link__content">
-            <span class="name">Phone</span>
-            <span class="descr">
-              <a href="tel:+79892804919">+7 (989) 280 49-19</a>
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="contact-list__item common-link">
-        <div class="common-link__wrap">
-          <div class="img">
-            <img src="@/assets/img/address.svg" alt="address" />
-          </div>
-          <div class="common-link__content">
-            <span class="name">Address</span>
-            <span class="descr">Aksai, Rostov-on-Don Region</span>
           </div>
         </div>
       </li>
@@ -84,45 +133,26 @@ const props = defineProps({
 
     <!-- соц.сети -->
 
-    <h5 class="sidebar__heading heading-5">Socials</h5>
+    <SidebarTitle title="Socials" />
     <ul class="sidebar__social-list social-list list-reset">
-      <li class="social-list__item common-link">
+      <li
+        class="social-list__item common-link"
+        v-for="social in socials"
+        :key="social.name"
+      >
         <div class="common-link__wrap">
           <div class="img">
-            <img src="@/assets/img/inst.svg" alt="inst" />
+            <img
+              :src="'/assets/img/' + social.img + '.svg'"
+              :alt="social.img"
+            />
           </div>
           <div class="common-link__content">
-            <span class="name">Instagram</span>
+            <span class="name">{{ social.name }}</span>
             <span class="descr">
-              <a href="instagram.com/mksm.17" target="_blank">@mksm.17</a>
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="social-list__item common-link">
-        <div class="common-link__wrap">
-          <div class="img">
-            <img src="@/assets/img/github.svg" alt="github" />
-          </div>
-          <div class="common-link__content">
-            <span class="name">Github</span>
-            <span class="descr">
-              <a href="https://github.com/h0lloway" target="_blank"
-                >@h0lloway</a
-              >
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="social-list__item common-link">
-        <div class="common-link__wrap">
-          <div class="img">
-            <img src="@/assets/img/vk.svg" width="30" alt="vk" />
-          </div>
-          <div class="common-link__content">
-            <span class="name">VK</span>
-            <span class="descr">
-              <a href="https://vk.com/h0lloway" target="_blank">@h0lloway</a>
+              <a :href="social.href" :target="['_blank']">
+                {{ social.descr }}
+              </a>
             </span>
           </div>
         </div>
@@ -131,27 +161,24 @@ const props = defineProps({
 
     <!-- языки -->
 
-    <h5 class="sidebar__heading heading-5">Languages</h5>
+    <SidebarTitle title="Languages" />
     <ul class="sidebar__lang-list lang-list list-reset">
-      <li class="lang-list__item common-link">
+      <li
+        class="lang-list__item common-link"
+        v-for="lang in langs"
+        :key="lang.name"
+      >
         <div class="common-link__wrap">
           <div class="img">
-            <img src="@/assets/img/rus.svg" width="34" alt="ru" />
+            <img
+              :src="'/assets/img/' + lang.img + '.svg'"
+              :width="34"
+              :alt="lang.img"
+            />
           </div>
           <div class="common-link__content">
-            <span class="name">Russian</span>
-            <span class="descr"> Native </span>
-          </div>
-        </div>
-      </li>
-      <li class="lang-list__item common-link">
-        <div class="common-link__wrap">
-          <div class="img">
-            <img src="@/assets/img/eng.svg" alt="eng" />
-          </div>
-          <div class="common-link__content">
-            <span class="name">English</span>
-            <span class="descr"> Intermediate </span>
+            <span class="name"> {{ lang.name }} </span>
+            <span class="descr"> {{ lang.descr }} </span>
           </div>
         </div>
       </li>
@@ -159,45 +186,19 @@ const props = defineProps({
 
     <!-- хобби и увлечения -->
 
-    <h5 class="sidebar__heading heading-5">Hobby & Interests</h5>
+    <SidebarTitle title="Hobby & Interests" />
     <ul class="sidebar__hobby-list hobby-list list-reset">
-      <li class="hobby-list__item common-link">
+      <li
+        class="hobby-list__item common-link"
+        v-for="hobby in hobbies"
+        :key="hobby.descr"
+      >
         <div class="common-link__wrap">
           <div class="img">
-            <img src="@/assets/img/family.svg" alt="family" />
+            <img :src="'/assets/img/' + hobby.img + '.svg'" :alt="hobby.img" />
           </div>
           <div class="common-link__content">
-            <span class="descr">Family/house</span>
-          </div>
-        </div>
-      </li>
-      <li class="hobby-list__item common-link">
-        <div class="common-link__wrap">
-          <div class="img">
-            <img src="@/assets/img/computer.svg" alt="gaming" />
-          </div>
-          <div class="common-link__content">
-            <span class="descr">Gaming</span>
-          </div>
-        </div>
-      </li>
-      <li class="hobby-list__item common-link">
-        <div class="common-link__wrap">
-          <div class="img">
-            <img src="@/assets/img/tv.svg" alt="TV" />
-          </div>
-          <div class="common-link__content">
-            <span class="descr">TV series</span>
-          </div>
-        </div>
-      </li>
-      <li class="hobby-list__item common-link">
-        <div class="common-link__wrap">
-          <div class="img">
-            <img src="@/assets/img/fitness.svg" alt="fitness" />
-          </div>
-          <div class="common-link__content">
-            <span class="descr">Fitness</span>
+            <span class="descr"> {{ hobby.descr }} </span>
           </div>
         </div>
       </li>

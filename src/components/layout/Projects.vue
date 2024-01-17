@@ -1,78 +1,34 @@
 <script setup>
+import ContentTitle from "@/components/ContentTitle.vue";
+import Divider from "@/components/Divider.vue";
+import ProjectsCard from "@/components/ProjectsCard.vue";
 </script>
 
 <template >
   <div class="projects">
-    <div class="projects__divider divider">
-      <div class="divider__circle">
-        <div class="divider__circle-inside">
-          <div class="divider__circle-inside-viol"></div>
-        </div>
-      </div>
-      <div class="divider__line"></div>
-    </div>
+    <Divider :class="['projecrts__divider']" />
 
     <div class="projects__content content-common">
-      <h1 class="heading-1 mb-30">
-        <div class="circle"></div>
-        <span>Latest projects</span>
-      </h1>
+      <ContentTitle title="Latest projects" />
 
       <ul class="projects__list list-reset">
-        <li class="projects__list-item list-item">
-          <div class="list-item__wrap wrap">
-            <div class="wrap__top top">
-              <img
-                src="@/assets/img/webpage.svg"
-                width="48"
-                height="48"
-                alt="logo"
-              />
-              <div class="top__name">
-                <span class="descr">Portfolio Webpage</span>
-                <span class="subdescr">
-                  Personal Portfolio webpage with resume</span
-                >
-              </div>
-            </div>
-            <div class="wrap__link">
-              <img src="@/assets/img/link.svg" width="24" alt="link" />
-              <a
-                class="link"
-                href="https://dubrovin-portfolio.netlify.app/"
-                target="_blank"
-                >LINK to project</a
-              >
-            </div>
-          </div>
-        </li>
-        <li class="projects__list-item list-item">
-          <div class="list-item__wrap wrap">
-            <div class="wrap__top top">
-              <img
-                src="@/assets/img/webpage.svg"
-                width="48"
-                height="48"
-                alt="logo"
-              />
-              <div class="top__name">
-                <span class="descr">SitDownPls Webpage</span>
-                <span class="subdescr"
-                  >Сайт магазина мебели (учебный проект)</span
-                >
-              </div>
-            </div>
-            <div class="wrap__link">
-              <img src="@/assets/img/link.svg" width="24" alt="link" />
-              <a
-                class="link"
-                href="https://h0lloway.github.io/SitDownPls__makdu/"
-                target="_blank"
-                >LINK to project</a
-              >
-            </div>
-          </div>
-        </li>
+        <ProjectsCard
+          descr="Portfolio Webpage"
+          subdescr="Personal Portfolio webpage with resume"
+          logoimg="webpage"
+          linktext="LINK to project"
+          link="https://dubrovin-portfolio.netlify.app/"
+          linkimg="link"
+        />
+
+        <ProjectsCard
+          descr="SitDownPls Webpage"
+          subdescr="Сайт магазина мебели (учебный проект)"
+          logoimg="webpage"
+          linktext="LINK to project"
+          link="https://h0lloway.github.io/SitDownPls__makdu/"
+          linkimg="link"
+        />
       </ul>
     </div>
   </div>
@@ -85,51 +41,14 @@
 
   &__list {
     display: flex;
-
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
     margin-bottom: 30px;
-  }
-  .list-item {
-    flex: 1 1 50%;
-    padding: 20px;
-    background: #ebf2fc;
-
-    .wrap {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      &__link {
-        margin-top: 15px;
-        display: flex;
-        align-items: center;
-
-        a {
-          padding-left: 5px;
-        }
-      }
-      .top {
-        display: flex;
-        align-items: center;
-
-        &__name {
-          padding-left: 15px;
-        }
-      }
-    }
-  }
-  .list-item:first-child {
-    border-radius: 10px 0 0 10px;
-  }
-  .list-item:last-child {
-    border-radius: 0 10px 10px 0;
-  }
-  .list-item:not(:last-child) {
-    margin-right: 10px;
   }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1600px) {
   .projects {
     &__list {
       flex-direction: column;
@@ -137,35 +56,6 @@
 
     &__list-item {
       width: 100%;
-    }
-
-    .list-item:not(:last-child) {
-      margin: 0;
-      margin-bottom: 10px;
-    }
-
-    .list-item:first-child {
-      border-radius: 10px 10px 0 0;
-    }
-
-    .list-item:last-child {
-      border-radius: 0 0 10px 10px;
-    }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .projects {
-    .list-item {
-      padding: 15px;
-      .wrap {
-        .top {
-          min-height: 48px;
-          &__name {
-            padding-left: 9px;
-          }
-        }
-      }
     }
   }
 }

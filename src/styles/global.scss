@@ -69,15 +69,30 @@ svg {
   }
 
   &-2 {
-    font-size: 22px;
-    margin: 20px 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 34px;
+    line-height: 100%;
+    margin-bottom: 30px;
     font-weight: 300;
+
+    @media screen and (max-width: 600px) {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
   }
 
   &-3 {
     font-size: 17px;
     margin: 20px 0;
     font-weight: 300;
+  }
+
+  &-5 {
+    margin-top: 26px;
+    margin-bottom: 20px;
+    color: #79819A;
+    font: 400 14px/133% 'DM Sans', sans-serif;
+    letter-spacing: 0.06px;
   }
 }
 

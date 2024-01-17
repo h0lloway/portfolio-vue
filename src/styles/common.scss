@@ -50,13 +50,6 @@
   margin-bottom: 12px;
 }
 
-.mb-30 {
-  position: relative;
-  display: flex;
-  margin: 0;
-  margin-bottom: 30px;
-}
-
 .content-common {
   width: 100%;
 }
@@ -126,9 +119,5 @@
 @media screen and (max-width: 500px) {
   .divider {
     margin-right: 15px;
-  }
-
-  .mb-30 {
-    margin-bottom: 15px;
   }
 }
