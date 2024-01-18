@@ -12,54 +12,7 @@ import SkillsCard from "@/components/SkillsCard.vue";
       <ContentTitle title="Tools/Skills" />
 
       <ul class="skills__list list-reset grid-list">
-        <SkillsCard
-          :class="['item1']"
-          mainimg="figma"
-          name="Figma"
-          descr="Верстка по макетам Figma"
-        />
-        <SkillsCard
-          :class="['item2']"
-          mainimg="gulp"
-          name="Gulp"
-          descr="Быстрый сборщик проектов"
-        />
-        <SkillsCard
-          :class="['item3']"
-          mainimg="git"
-          name="Git"
-          descr="Система контроля версий"
-        />
-        <SkillsCard
-          :class="['item4']"
-          mainimg="vscode"
-          name="VS Code"
-          descr="Редактор кода"
-        />
-        <SkillsCard
-          :class="['item5']"
-          mainimg="notion"
-          name="Notion"
-          descr="Project managment"
-        />
-        <SkillsCard
-          :class="['item6']"
-          mainimg="html"
-          name="HTML5"
-          descr="Семантическая разметка кода Использование БЭМ"
-        />
-        <SkillsCard
-          :class="['item7']"
-          mainimg="sass"
-          name="SCSS"
-          descr="Стилизация элементов на странице"
-        />
-        <SkillsCard
-          :class="['item8']"
-          mainimg="JS"
-          name="JavaScript"
-          descr="Скрипты для динамичности страницы"
-        />
+        <SkillsCard />
       </ul>
     </div>
   </div>
@@ -71,121 +24,26 @@ import SkillsCard from "@/components/SkillsCard.vue";
   display: flex;
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    margin-left: -10px;
+    margin-right: -10px;
 
     margin-bottom: 30px;
-
-    .item1 {
-      grid-area: 4 / 1 / 7 / 4;
-      border-radius: 0px 0px 0px 10px;
-    }
-
-    .item2 {
-      grid-area: 4 / 4 / 7 / 7;
-    }
-    .item3 {
-      grid-area: 4 / 7 / 7 / 10;
-    }
-    .item4 {
-      grid-area: 4 / 10 / 7 / 13;
-    }
-    .item5 {
-      grid-area: 4 / 13 / 7 / 16;
-      border-radius: 0px 0px 10px 0px;
-    }
-    .item6 {
-      grid-area: 1 / 1 / 4 / 6;
-      border-radius: 10px 0px 0px 0px;
-    }
-    .item7 {
-      grid-area: 1 / 6 / 4 / 11;
-    }
-    .item8 {
-      grid-area: 1 / 11 / 4 / 16;
-      border-radius: 0px 10px 0px 0px;
-    }
   }
 }
 
 @media screen and (max-width: 1300px) {
   .skills {
     &__list {
-      grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: repeat(12, 1fr);
-    }
-
-    .item6 {
-      border-radius: 10px 0 0 0;
-      grid-area: 1 / 1 / 5 / 5;
-    }
-    .item7 {
-      grid-area: 1 / 5 / 5 / 9;
-    }
-    .item8 {
-      border-radius: 0 10px 0 0;
-      grid-area: 1 / 9 / 5 / 13;
-    }
-    .item4 {
-      border-radius: 0 0 0 10px;
-      grid-area: 5 / 1 / 9 / 5;
-    }
-    .item5 {
-      grid-area: 5 / 5 / 9 / 9;
-    }
-    .item1 {
-      border-radius: 0 0 10px 0;
-      grid-area: 5 / 9 / 9 / 13;
-    }
-    .item2 {
-      border-radius: 0 0 0 10px;
-      grid-area: 9 / 3 / 13 / 7;
-    }
-    .item3 {
-      border-radius: 0 0 10px 0;
-      grid-area: 9 / 7 / 13 / 11;
+      justify-content: center;
+      flex-wrap: wrap;
     }
   }
 }
 
 @media screen and (max-width: 1100px) {
   .skills {
-    &__list {
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(12, 1fr);
-    }
-
-    .item6 {
-      border-radius: 10px 0 0 0;
-      grid-area: 1 / 1 / 4 / 4;
-    }
-    .item7 {
-      border-radius: 0 10px 0 0;
-      grid-area: 1 / 4 / 4 / 7;
-    }
-    .item8 {
-      grid-area: 4 / 1 / 7 / 4;
-    }
-    .item4 {
-      grid-area: 4 / 4 / 7 / 7;
-    }
-    .item5 {
-      grid-area: 7 / 1 / 10 / 4;
-    }
-    .item1 {
-      grid-area: 7 / 4 / 10 / 7;
-    }
-    .item2 {
-      border-radius: 0 0 0 10px;
-      grid-area: 10 / 1 / 13 / 4;
-    }
-    .item3 {
-      border-radius: 0 0 10px 0;
-      grid-area: 10 / 4 / 13 / 7;
-    }
   }
 }
 </style>

@@ -1,46 +1,65 @@
 <script setup>
 import { ref } from "vue";
 
-// const items = ref([
-//   {
-//     mainimg: "skillbox-logo",
-//     name: "Образовательная платформа Skillbox",
-//     descr: "Профессия Frontend-разработчик",
-//   },
-//   {
-//     mainimg: "dstu",
-//     name: "Донской Государственный Технический Университет",
-//     descr: "Кафедра «Технология Машиностроения",
-//   },
-// ]);
-
-const props = defineProps({
-  mainimg: {
-    type: String,
-    required: true,
+const items = ref([
+  {
+    mainimg: "figma",
+    name: "Figma",
+    descr: "Верстка по макетам Figma",
   },
-  name: {
-    type: Boolean,
-    default: "Name",
+  {
+    mainimg: "vscode",
+    name: "VS Code",
+    descr: "Редактор кода",
   },
-  descr: {
-    type: Boolean,
-    default: "Descr",
+  {
+    mainimg: "git",
+    name: "Git",
+    descr: "Система контроля версий",
   },
-});
+  {
+    mainimg: "gulp",
+    name: "Gulp",
+    descr: "Быстрый сборщик проектов",
+  },
+  {
+    mainimg: "notion",
+    name: "Notion",
+    descr: "Project managment",
+  },
+  {
+    mainimg: "html",
+    name: "HTML5",
+    descr: "Семантическая разметка кода Использование БЭМ",
+  },
+  {
+    mainimg: "sass",
+    name: "SCSS",
+    descr: "Стилизация элементов на странице",
+  },
+  {
+    mainimg: "JS",
+    name: "JavaScript",
+    descr: "Скрипты для динамичности страницы",
+  },
+]);
 </script>
 
 <template>
-  <li class="skills__list-item list-item">
-    <!-- v-for="item in items" :key="item.name" -->
-    <div class="list-item__wrap">
+  <li
+    class="skills__list-item list-item"
+    v-for="item in items"
+    :key="item.name"
+  >
+    <!--  -->
+    <div class="list-item__wrap wrap">
       <img
         :class="['wrap-img']"
-        :src="'/assets/img/' + mainimg + '.svg'"
-        :alt="mainimg"
+        :src="'/assets/img/' + item.mainimg + '.svg'"
+        :alt="item.mainimg"
       />
-      <div :class="['tools-name']">{{ name }}</div>
-      <div :class="['tools-descr']">{{ descr }}</div>
+      <div :class="['tools-name']">{{ item.name }}</div>
+      <div :class="['tools-descr']">{{ item.descr }}</div>
     </div>
   </li>
 </template>
@@ -48,10 +67,12 @@ const props = defineProps({
 <style lang="scss" scoped>
 .list-item {
   display: block;
-  background: #ebf2fc;
-  // flex: 0 0 20%;
 
-  &__wrap {
+  flex: 1 0 20%;
+  padding: 5px 5px;
+  min-height: 220px;
+
+  .wrap {
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -59,6 +80,7 @@ const props = defineProps({
     align-items: center;
     text-align: center;
     height: 100%;
+    background: #ebf2fc;
 
     .wrap-img {
       width: 60px;
@@ -78,18 +100,90 @@ const props = defineProps({
   }
 }
 
+.list-item:nth-child(6) {
+  .wrap {
+    border-radius: 10px 0 0 0;
+  }
+}
+
+.list-item:nth-child(1) {
+  .wrap {
+    border-radius: 0 0 0 10px;
+  }
+}
+.list-item:nth-child(5) {
+  .wrap {
+    border-radius: 0 0 10px 0;
+  }
+}
+.list-item:nth-child(8) {
+  .wrap {
+    border-radius: 0 10px 0 0;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .skills {
     .list-item {
-      border-radius: 0;
+      flex: 0 0 33.333%;
+    }
+
+    .list-item:nth-child(3) {
+      .wrap {
+        border-radius: 0 10px 0 0;
+      }
+    }
+
+    .list-item:nth-child(6) {
+      .wrap {
+        border-radius: 0 0 0 0;
+      }
+    }
+
+    .list-item:nth-child(1) {
+      .wrap {
+        border-radius: 10px 0 0 0;
+      }
+    }
+    .list-item:nth-child(4) {
+      .wrap {
+        border-radius: 0 0 0 0;
+      }
+    }
+    .list-item:nth-child(5) {
+      .wrap {
+        border-radius: 0 0 0 0;
+      }
+    }
+    .list-item:nth-child(7) {
+      .wrap {
+        border-radius: 0 0 0 10px;
+      }
+    }
+    .list-item:nth-child(8) {
+      .wrap {
+        border-radius: 0 0 10px 0;
+      }
     }
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1150px) {
   .skills {
     .list-item {
-      border-radius: 0;
+      flex: 0 0 50%;
+    }
+
+    .list-item:nth-child(3) {
+      .wrap {
+        border-radius: 0 0 0 0;
+      }
+    }
+
+    .list-item:nth-child(2) {
+      .wrap {
+        border-radius: 0 10px 0 0;
+      }
     }
   }
 }
