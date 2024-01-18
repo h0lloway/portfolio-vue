@@ -1,40 +1,37 @@
 <script setup>
-const props = defineProps({
-  descr: {
-    type: Boolean,
-    default: "Descr",
+import { ref } from "vue";
+
+const items = ref([
+  {
+    mainimg: "skillbox-logo",
+    descr: "Skillbox",
+    subdescr: "Frontend-developer",
+    date: "Dec\u00A02021 - Aug\u00A02022",
   },
-  subdescr: {
-    type: Boolean,
-    default: "Subdescr",
-  },
-  mainimg: {
-    type: String,
-    required: true,
-  },
-  date: {
-    type: Boolean,
-    default: "Date",
-  },
-});
+]);
+
 </script>
 
 <template>
-  <li class="certificates__list-item list-item">
+  <li
+    class="certificates__list-item list-item"
+    v-for="item in items"
+    :key="item.name"
+  >
     <div class="list-item__wrap wrap">
       <div class="wrap__left left">
-        <img :class="['left__img']"
-          :src="'/assets/img/' + mainimg + '.svg'"
+        <img
+          :class="['left__img']"
+          :src="'/assets/img/' + item.mainimg + '.svg'"
           :width="47"
-          :alt="mainimg"
+          :alt="item.mainimg"
         />
 
         <div class="left__name">
-          <span :class="['descr']"> {{ descr }} </span>
-          <span :class="['subdescr']"> {{ subdescr }} </span>
+          <span :class="['descr']"> {{ item.descr }} </span>
+          <span :class="['subdescr']"> {{ item.date }}</span>
         </div>
       </div>
-      <div class="wrap__date">{{ date }}</div>
     </div>
   </li>
 </template>

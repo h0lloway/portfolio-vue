@@ -1,4 +1,19 @@
 <script setup>
+import { ref } from "vue";
+
+// const items = ref([
+//   {
+//     mainimg: "skillbox-logo",
+//     name: "Образовательная платформа Skillbox",
+//     descr: "Профессия Frontend-разработчик",
+//   },
+//   {
+//     mainimg: "dstu",
+//     name: "Донской Государственный Технический Университет",
+//     descr: "Кафедра «Технология Машиностроения",
+//   },
+// ]);
+
 const props = defineProps({
   mainimg: {
     type: String,
@@ -17,6 +32,7 @@ const props = defineProps({
 
 <template>
   <li class="skills__list-item list-item">
+    <!-- v-for="item in items" :key="item.name" -->
     <div class="list-item__wrap">
       <img
         :class="['wrap-img']"
@@ -33,6 +49,7 @@ const props = defineProps({
 .list-item {
   display: block;
   background: #ebf2fc;
+  // flex: 0 0 20%;
 
   &__wrap {
     padding: 20px;

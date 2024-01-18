@@ -12,20 +12,7 @@ import EducationCard from "@/components/EducationCard.vue";
       <ContentTitle :class="['education__title']" title="Education" />
 
       <ul class="education__list list-reset">
-        <EducationCard
-          :class="['color-logo']"
-          name="Образовательная платформа Skillbox"
-          images="skillbox-logo"
-          descr="Профессия Frontend&#8209;разработчик"
-          date="2021-2022"
-        />
-
-        <EducationCard
-          name="Донской Государственный Технический Университет"
-          images="dstu"
-          descr="Кафедра «Технология Машиностроения»"
-          date="2013-2015"
-        />
+        <EducationCard />
       </ul>
     </div>
   </div>

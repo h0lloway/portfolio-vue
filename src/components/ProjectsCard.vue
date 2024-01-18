@@ -1,55 +1,80 @@
 <script setup>
-const props = defineProps({
-  descr: {
-    type: Boolean,
-    default: "Descr",
+import { ref } from "vue";
+
+const items = ref([
+  {
+    descr: "Portfolio Webpage",
+    subdescr: "Personal Portfolio webpage with resume",
+    logoimg: "webpage",
+    linktext: "LINK to project",
+    link: "https://dubrovin-portfolio.netlify.app/",
+    linkimg: "link",
   },
-  subdescr: {
-    type: Boolean,
-    default: "Subdescr",
+  {
+    descr: "SitDownPls Webpage",
+    subdescr: "Сайт магазина мебели (учебный проект)",
+    logoimg: "webpage",
+    linktext: "LINK to project",
+    link: "https://h0lloway.github.io/SitDownPls__makdu/",
+    linkimg: "link",
   },
-  logoimg: {
-    type: String,
-    required: true,
-  },
-  linktext: {
-    type: String,
-    required: true,
-  },
-	link: {
-    type: String,
-    required: true,
-  },
-  linkimg: {
-    type: String,
-    required: true,
-  },
-});
+]);
+
+// const props = defineProps({
+//   descr: {
+//     type: Boolean,
+//     default: "Descr",
+//   },
+//   subdescr: {
+//     type: Boolean,
+//     default: "Subdescr",
+//   },
+//   logoimg: {
+//     type: String,
+//     required: true,
+//   },
+//   linktext: {
+//     type: String,
+//     required: true,
+//   },
+//   link: {
+//     type: String,
+//     required: true,
+//   },
+//   linkimg: {
+//     type: String,
+//     required: true,
+//   },
+// });
 </script>
 
 <template>
-  <li class="projects__list-item list-item">
+  <li
+    class="projects__list-item list-item"
+    v-for="item in items"
+    :key="item.name"
+  >
     <div class="list-item__wrap wrap">
       <div class="wrap__top top">
         <img
           :class="['top__img']"
-          :src="'/assets/img/' + logoimg + '.svg'"
+          :src="'/assets/img/' + item.logoimg + '.svg'"
           :width="48"
-          :alt="logoimg"
+          :alt="item.logoimg"
         />
         <div class="top__name">
-          <span class="descr"> {{ descr }} </span>
-          <span class="subdescr"> {{ subdescr }} </span>
+          <span class="descr"> {{ item.descr }} </span>
+          <span class="subdescr"> {{ item.subdescr }} </span>
         </div>
       </div>
       <div class="wrap__link">
         <img
-          :src="'/assets/img/' + linkimg + '.svg'"
+          :src="'/assets/img/' + item.linkimg + '.svg'"
           :width="24"
-          :alt="linkimg"
+          :alt="item.linkimg"
         />
         <a :href="link" :class="['link']" :target="['_blank']">
-          {{ linktext }}
+          {{ item.linktext }}
         </a>
       </div>
     </div>

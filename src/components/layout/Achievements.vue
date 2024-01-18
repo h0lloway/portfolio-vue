@@ -13,40 +13,8 @@ import AchievementsCard from "@/components/AchievementsCard.vue";
 
       <ul class="achievements__list list-reset">
         <AchievementsCard :class="['bg-color']"
-          live="Present"
-          locatetext="Online"
-          descr="Frontend-developer"
-          subdescr="МТС Финтех"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sequi
-              facilis nostrum, culpa, dignissimos dicta aliquid ut commodi
-              aspernatur harum voluptatum enim libero."
-          locateimg="geo"
-          mainimg="MTC"
         />
 
-        <AchievementsCard
-          live="Dec 2022 - Jule 2023"
-          locatetext="Online"
-          descr="Frontend-developer"
-          subdescr="Актион"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sequi
-              facilis nostrum, culpa, dignissimos dicta aliquid ut commodi
-              aspernatur harum voluptatum enim libero."
-          locateimg="geo"
-          mainimg="action"
-        />
-
-        <AchievementsCard
-          live="April 2022 - Dec 2022"
-          locatetext="Online"
-          descr="HTML coder"
-          subdescr="Adcome labs"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sequi
-              facilis nostrum, culpa, dignissimos dicta aliquid ut commodi
-              aspernatur harum voluptatum enim libero."
-          locateimg="geo"
-          mainimg="adcome"
-        />
       </ul>
     </div>
   </div>

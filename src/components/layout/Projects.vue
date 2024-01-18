@@ -12,23 +12,7 @@ import ProjectsCard from "@/components/ProjectsCard.vue";
       <ContentTitle title="Latest projects" />
 
       <ul class="projects__list list-reset">
-        <ProjectsCard
-          descr="Portfolio Webpage"
-          subdescr="Personal Portfolio webpage with resume"
-          logoimg="webpage"
-          linktext="LINK to project"
-          link="https://dubrovin-portfolio.netlify.app/"
-          linkimg="link"
-        />
-
-        <ProjectsCard
-          descr="SitDownPls Webpage"
-          subdescr="Сайт магазина мебели (учебный проект)"
-          logoimg="webpage"
-          linktext="LINK to project"
-          link="https://h0lloway.github.io/SitDownPls__makdu/"
-          linkimg="link"
-        />
+        <ProjectsCard />
       </ul>
     </div>
   </div>

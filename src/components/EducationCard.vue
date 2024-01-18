@@ -1,38 +1,40 @@
 <script setup>
-const props = defineProps({
-  name: {
-    type: Boolean,
-    default: "Name",
+import { ref } from "vue";
+
+const items = ref([
+  {
+    name: "Образовательная платформа Skillbox",
+    images: "skillbox-logo",
+    descr: "Профессия Frontend-разработчик",
+    date: "2021-2022",
   },
-  descr: {
-    type: Boolean,
-    default: "Descr",
+  {
+    name: "Донской Государственный Технический Университет",
+    images: "dstu",
+    descr: "Кафедра «Технология Машиностроения",
+    date: "2013-2015",
   },
-  date: {
-    type: Boolean,
-    default: "Date",
-  },
-  images: {
-    type: String,
-    required: true,
-  },
-});
+]);
 </script>
 
 <template>
-  <li class="education__list-item list-item">
+  <li
+    class="education__list-item list-item"
+    v-for="item in items"
+    :key="item.name"
+  >
     <div class="list-item__wrap wrap">
       <div class="wrap__name">
         <img
           :class="['wrap__img']"
-          :src="'/assets/img/' + images + '.svg'"
+          :src="'/assets/img/' + item.images + '.svg'"
           :width="50"
-          :alt="images"
+          :alt="item.images"
         />
-        <span>{{ name }}</span>
+        <span>{{ item.name }}</span>
       </div>
-      <div :class="['wrap__descr']">{{ descr }}</div>
-      <div :class="['wrap__date']">{{ date }}</div>
+      <div :class="['wrap__descr']">{{ item.descr }}</div>
+      <div :class="['wrap__date']">{{ item.date }}</div>
     </div>
   </li>
 </template>

@@ -12,14 +12,7 @@ import CertificatesCard from "@/components/CertificatesCard.vue";
       <ContentTitle title="Certificates & Awards" />
 
       <ul class="certificates__list list-reset">
-        
-        <CertificatesCard
-          mainimg="skillbox-logo"
-          descr="Skillbox"
-          subdescr="Frontend-developer"
-          date="Dec&#160;2021 - Aug&#160;2022"
-        />
-
+        <CertificatesCard />
       </ul>
     </div>
   </div>
