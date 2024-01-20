@@ -1,10 +1,12 @@
-<script setup>
-  const props = defineProps({
+<script>
+export default {
+  props: {
     title: {
       type: String,
-      default: 'Title'
-    }
-  })
+      required: true,
+    },
+  },
+}
 </script>
 
 <template>

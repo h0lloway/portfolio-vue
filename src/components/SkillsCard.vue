@@ -1,48 +1,52 @@
-<script setup>
-import { ref } from "vue";
-
-const items = ref([
-  {
-    mainimg: "figma",
-    name: "Figma",
-    descr: "Верстка по макетам Figma",
+<script>
+export default {
+  data() {
+    return {
+      items: [
+        {
+          mainimg: "figma",
+          name: "Figma",
+          descr: "Верстка по макетам Figma",
+        },
+        {
+          mainimg: "vscode",
+          name: "VS Code",
+          descr: "Редактор кода",
+        },
+        {
+          mainimg: "git",
+          name: "Git",
+          descr: "Система контроля версий",
+        },
+        {
+          mainimg: "gulp",
+          name: "Gulp",
+          descr: "Быстрый сборщик проектов",
+        },
+        {
+          mainimg: "notion",
+          name: "Notion",
+          descr: "Project managment",
+        },
+        {
+          mainimg: "html",
+          name: "HTML5",
+          descr: "Семантическая разметка кода Использование БЭМ",
+        },
+        {
+          mainimg: "sass",
+          name: "SCSS",
+          descr: "Стилизация элементов на странице",
+        },
+        {
+          mainimg: "JS",
+          name: "JavaScript",
+          descr: "Скрипты для динамичности страницы",
+        },
+      ],
+    };
   },
-  {
-    mainimg: "vscode",
-    name: "VS Code",
-    descr: "Редактор кода",
-  },
-  {
-    mainimg: "git",
-    name: "Git",
-    descr: "Система контроля версий",
-  },
-  {
-    mainimg: "gulp",
-    name: "Gulp",
-    descr: "Быстрый сборщик проектов",
-  },
-  {
-    mainimg: "notion",
-    name: "Notion",
-    descr: "Project managment",
-  },
-  {
-    mainimg: "html",
-    name: "HTML5",
-    descr: "Семантическая разметка кода Использование БЭМ",
-  },
-  {
-    mainimg: "sass",
-    name: "SCSS",
-    descr: "Стилизация элементов на странице",
-  },
-  {
-    mainimg: "JS",
-    name: "JavaScript",
-    descr: "Скрипты для динамичности страницы",
-  },
-]);
+};
 </script>
 
 <template>
@@ -51,7 +55,6 @@ const items = ref([
     v-for="item in items"
     :key="item.name"
   >
-    <!--  -->
     <div class="list-item__wrap wrap">
       <img
         :class="['wrap-img']"

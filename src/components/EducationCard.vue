@@ -1,20 +1,24 @@
-<script setup>
-import { ref } from "vue";
-
-const items = ref([
-  {
-    name: "Образовательная платформа Skillbox",
-    images: "skillbox-logo",
-    descr: "Профессия Frontend-разработчик",
-    date: "2021-2022",
+<script >
+export default {
+  data() {
+    return {
+      items: [
+        {
+          name: "Образовательная платформа Skillbox",
+          images: "skillbox-logo",
+          descr: "Профессия Frontend-разработчик",
+          date: "2021-2022",
+        },
+        {
+          name: "Донской Государственный Технический Университет",
+          images: "dstu",
+          descr: "Кафедра «Технология Машиностроения",
+          date: "2013-2015",
+        },
+      ],
+    };
   },
-  {
-    name: "Донской Государственный Технический Университет",
-    images: "dstu",
-    descr: "Кафедра «Технология Машиностроения",
-    date: "2013-2015",
-  },
-]);
+};
 </script>
 
 <template>

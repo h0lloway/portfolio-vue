@@ -1,5 +1,4 @@
 <script setup>
-// import LayoutHeader from '@/components/layout/Header.vue';
 import LayoutSidebar from "@/components/layout/Sidebar.vue";
 import LayoutEducation from "@/components/layout/Education.vue";
 import LayoutAchievements from "@/components/layout/Achievements.vue";

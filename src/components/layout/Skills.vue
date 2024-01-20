@@ -1,7 +1,15 @@
-<script setup>
+<script>
 import ContentTitle from "@/components/ContentTitle.vue";
 import Divider from "@/components/Divider.vue";
 import SkillsCard from "@/components/SkillsCard.vue";
+
+export default {
+  components: {
+    SkillsCard,
+    Divider,
+    ContentTitle,
+  },
+};
 </script>
 
 <template >

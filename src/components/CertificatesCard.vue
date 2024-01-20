@@ -1,15 +1,18 @@
-<script setup>
-import { ref } from "vue";
-
-const items = ref([
-  {
-    mainimg: "skillbox-logo",
-    descr: "Skillbox",
-    subdescr: "Frontend-developer",
-    date: "Dec\u00A02021 - Aug\u00A02022",
+<script >
+export default {
+  data() {
+    return {
+      items: [
+        {
+          mainimg: "skillbox-logo",
+          descr: "Skillbox",
+          subdescr: "Frontend-developer",
+          date: "Dec\u00A02021 - Aug\u00A02022",
+        },
+      ],
+    };
   },
-]);
-
+};
 </script>
 
 <template>

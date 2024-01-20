@@ -1,51 +1,28 @@
-<script setup>
-import { ref } from "vue";
-
-const items = ref([
-  {
-    descr: "Portfolio Webpage",
-    subdescr: "Personal Portfolio webpage with resume",
-    logoimg: "webpage",
-    linktext: "LINK to project",
-    link: "https://dubrovin-portfolio.netlify.app/",
-    linkimg: "link",
+<script>
+export default {
+  data() {
+    return {
+      items: [
+        {
+          descr: "Portfolio Webpage",
+          subdescr: "Personal Portfolio webpage with resume",
+          logoimg: "webpage",
+          linktext: "LINK to project",
+          link: "https://dubrovin-portfolio.netlify.app/",
+          linkimg: "link",
+        },
+        {
+          descr: "SitDownPls Webpage",
+          subdescr: "Сайт магазина мебели (учебный проект)",
+          logoimg: "webpage",
+          linktext: "LINK to project",
+          link: "https://h0lloway.github.io/SitDownPls__makdu/",
+          linkimg: "link",
+        },
+      ],
+    };
   },
-  {
-    descr: "SitDownPls Webpage",
-    subdescr: "Сайт магазина мебели (учебный проект)",
-    logoimg: "webpage",
-    linktext: "LINK to project",
-    link: "https://h0lloway.github.io/SitDownPls__makdu/",
-    linkimg: "link",
-  },
-]);
-
-// const props = defineProps({
-//   descr: {
-//     type: Boolean,
-//     default: "Descr",
-//   },
-//   subdescr: {
-//     type: Boolean,
-//     default: "Subdescr",
-//   },
-//   logoimg: {
-//     type: String,
-//     required: true,
-//   },
-//   linktext: {
-//     type: String,
-//     required: true,
-//   },
-//   link: {
-//     type: String,
-//     required: true,
-//   },
-//   linkimg: {
-//     type: String,
-//     required: true,
-//   },
-// });
+};
 </script>
 
 <template>

@@ -1,92 +1,96 @@
-<script setup>
+<script >
 import SidebarTitle from "@/components/SidebarTitle.vue";
-import { ref } from "vue";
 
-const props = defineProps({
-  openSidebar: {
-    type: Boolean,
-    required: false,
+export default {
+  props: {
+    openSidebar: {
+      type: Boolean,
+      required: false,
+    },
   },
-});
-
-const contacts = ref([
-  {
-    name: "Email",
-    descr: "gvozdb27@gmail.com",
-    img: "email",
-    href: "mailto:gvozdb27@gmail.com",
+  data() {
+    return {
+      contacts: [
+        {
+          name: "Email",
+          descr: "gvozdb27@gmail.com",
+          img: "email",
+          href: "mailto:gvozdb27@gmail.com",
+        },
+        {
+          name: "Website",
+          descr: "h0lloway.github.io/my-portfolio/",
+          img: "website",
+          href: "https://h0lloway.github.io/my-portfolio/",
+        },
+        {
+          name: "Phone",
+          descr: "+7 (989) 280 49-19",
+          img: "phone",
+          href: "tel:+79892804919",
+        },
+        {
+          name: "Address",
+          descr: "Aksai, Rostov-on-Don Region",
+          img: "address",
+        },
+      ],
+      socials: [
+        {
+          name: "Instagram",
+          descr: "@mksm.17",
+          img: "inst",
+          href: "https://www.instagram.com/mksm.17",
+        },
+        {
+          name: "Github",
+          descr: "@h0lloway",
+          img: "github",
+          href: "https://github.com/h0lloway",
+        },
+        {
+          name: "VK",
+          descr: "@h0lloway",
+          img: "vk",
+          href: "https://vk.com/h0lloway",
+        },
+      ],
+      langs: [
+        {
+          name: "Russian",
+          descr: "Native",
+          img: "rus",
+        },
+        {
+          name: "English",
+          descr: "Intermediate",
+          img: "eng",
+        },
+      ],
+      hobbies: [
+        {
+          descr: "Family/house",
+          img: "family",
+        },
+        {
+          descr: "Gaming",
+          img: "computer",
+        },
+        {
+          descr: "TV series",
+          img: "tv",
+        },
+        {
+          descr: "Fitness",
+          img: "fitness",
+        },
+      ],
+    };
   },
-  {
-    name: "Website",
-    descr: "h0lloway.github.io/my-portfolio/",
-    img: "website",
-    href: "https://h0lloway.github.io/my-portfolio/",
+  components: {
+    SidebarTitle,
   },
-  {
-    name: "Phone",
-    descr: "+7 (989) 280 49-19",
-    img: "phone",
-    href: "tel:+79892804919",
-  },
-  {
-    name: "Address",
-    descr: "Aksai, Rostov-on-Don Region",
-    img: "address",
-  },
-]);
-
-const socials = ref([
-  {
-    name: "Instagram",
-    descr: "@mksm.17",
-    img: "inst",
-    href: "https://www.instagram.com/mksm.17",
-  },
-  {
-    name: "Github",
-    descr: "@h0lloway",
-    img: "github",
-    href: "https://github.com/h0lloway",
-  },
-  {
-    name: "VK",
-    descr: "@h0lloway",
-    img: "vk",
-    href: "https://vk.com/h0lloway",
-  },
-]);
-
-const langs = ref([
-  {
-    name: "Russian",
-    descr: "Native",
-    img: "rus",
-  },
-  {
-    name: "English",
-    descr: "Intermediate",
-    img: "eng",
-  },
-]);
-
-const hobbies = ref([
-  {
-    descr: "Family/house",
-    img: "family",
-  },
-  {
-    descr: "Gaming",
-    img: "computer",
-  },
-  {
-    descr: "TV series",
-    img: "tv",
-  },
-  {
-    descr: "Fitness",
-    img: "fitness",
-  },
-]);
+};
 </script>
 
 

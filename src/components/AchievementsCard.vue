@@ -1,42 +1,46 @@
-<script setup>
-import { ref } from "vue";
-
-const items = ref([
-  {
-    descr: "Frontend-developer",
-    subdescr: "МТС Финтех",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sequi facilis nostrum, culpa, dignissimos dicta aliquid ut commodi aspernatur harum voluptatum enim libero.",
-    live: "Present",
-    locatetext: "Online",
-    locateimg: "geo",
-    mainimg: "MTC",
+<script>
+export default {
+  data() {
+    return {
+      items: [
+        {
+          descr: "Frontend-developer",
+          subdescr: "МТС Финтех",
+          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sequi facilis nostrum, culpa, dignissimos dicta aliquid ut commodi aspernatur harum voluptatum enim libero.",
+          live: "Present",
+          locatetext: "Online",
+          locateimg: "geo",
+          mainimg: "MTC",
+        },
+        {
+          descr: "Frontend-developer",
+          subdescr: "Актион",
+          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sequi facilis nostrum, culpa, dignissimos dicta aliquid ut commodi aspernatur harum voluptatum enim libero.",
+          live: "Dec 2022 - Jule 2023",
+          locatetext: "Online",
+          locateimg: "geo",
+          mainimg: "action",
+        },
+        {
+          descr: "HTML coder",
+          subdescr: "Adcome labs",
+          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sequi facilis nostrum, culpa, dignissimos dicta aliquid ut commodi aspernatur harum voluptatum enim libero.",
+          live: "April 2022 - Dec 2022",
+          locatetext: "Online",
+          locateimg: "geo",
+          mainimg: "adcome",
+        },
+      ],
+    };
   },
-  {
-    descr: "Frontend-developer",
-    subdescr: "Актион",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sequi facilis nostrum, culpa, dignissimos dicta aliquid ut commodi aspernatur harum voluptatum enim libero.",
-    live: "Dec 2022 - Jule 2023",
-    locatetext: "Online",
-    locateimg: "geo",
-    mainimg: "action",
-  },
-  {
-    descr: "HTML coder",
-    subdescr: "Adcome labs",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sequi facilis nostrum, culpa, dignissimos dicta aliquid ut commodi aspernatur harum voluptatum enim libero.",
-    live: "April 2022 - Dec 2022",
-    locatetext: "Online",
-    locateimg: "geo",
-    mainimg: "adcome",
-  },
-]);
+};
 </script>
 
 <template>
   <li
     class="achievements__list-item list-item"
     v-for="item in items"
-    :key="item.descr"
+    :key="item.subdescr"
   >
     <div class="list-item__wrap wrap">
       <div class="wrap__left left">
